@@ -8,33 +8,34 @@ void main() {
   growableList.insert(0, 'Thien');
   growableList.insert(0, 'Tran');
 
+  Set set = {"Tran", "Thien", "Trong"};
 
-  Set set = {"Tran","Thien","Trong"};
-  Set set2 = {"Trong","Dep","Trai"};
+  Set set2 = {"Trong", "Dep", "Trai"};
 
-  List colors = [
-    'yelow',
-    'green',
+  Iterable set3 = set2.map((e) => e + " 123");
 
-    ...set
-  ];
+  set3.forEach((element) {
+    print(element);
+  });
 
-  Map vipRestaurant = {
-    "achivement":"best restaurant",
-    "salary" : "\$10,000"
-  };
+  Set set4 = {};
+  for(var item in set2){
+    set4.add(item + " 123");
+  }
+
+  set4.forEach((element) {
+    print(element);
+  });
+
+  // set.forEach((element) {
+  //   print(element);
+  // });
+  List colors = ['yelow', 'green', ...set];
+
+  Map vipRestaurant = {"achivement": "best restaurant", "salary": "\$10,000"};
 
   var start = 6;
-  Map restaurant = {
-    "chief" : "Trong",
-    if(start>4)
-     ...vipRestaurant
-  };
-
+  Map restaurant = {"chief": "Trong", if (start > 4) ...vipRestaurant};
 
   print(restaurant);
-
-
-
-  
 }
